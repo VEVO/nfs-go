@@ -1,5 +1,4 @@
-DC=docker-compose
-SLACK_NOTIFY=$(DC) -f resources/docker-compose.slack.yml run --rm
+DC=docker-compose -f resources/docker-compose.yml
 build:
 	@echo "building nothing"
 
@@ -13,8 +12,8 @@ prd:
 	@echo "deploy prd something"
 
 slack_success:
-	$(SLACK_NOTIFY) success
+	$(DC) run --rm success
 
 slack_failure:
-	$(SLACK_NOTIFY) failure
+	$(DC) run --rm failure
 
