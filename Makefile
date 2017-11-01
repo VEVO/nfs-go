@@ -1,7 +1,7 @@
 DC=docker-compose -f resources/docker-compose.yml
 GOFILES_NOVENDOR=$(shell find . -type f -name '*.go' -not -path "./vendor/*")
 
-default: go-build
+default: go-dep go-lint test
 
 build:
 	@echo "building nothing"
@@ -37,19 +37,19 @@ go-fmt:
 go-lint: go-fmt
 	@go get github.com/golang/lint/golint; \
 	if [ -f "glide.yaml" ] ; then \
-		golint $(GO_EXTRAFLAGS) -set_exit_status $(glide novendor); \
+		golint $(GO_EXTRAFLAGS) -set_exit_status $$(glide novendor); \
 	else \
 		golint $(GO_EXTRAFLAGS) -set_exit_status ./...; \
 	fi
 	@if [ -f "glide.yaml" ] ; then \
-		go vet -v $(glide novendor); \
+		go vet -v $$(glide novendor); \
 	else \
 		go vet -v ./...; \
 	fi
 
 test:
 	@if [ -f "glide.yaml" ] ; then \
-		go test $(glide novendor); \
+		go test $$(glide novendor); \
 	else \
 		go test $(GO_EXTRAFLAGS) -v ./...; \
 	fi
