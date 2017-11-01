@@ -8,7 +8,7 @@ The nfs-go package provides helpers that abide by the N-Factor Service specifica
 
 ### Logging
 
-Expose the folling environment variables:
+Expose the following environment variables:
  * `SERVICE`
  * `TEAM`
  * `LOG_LEVEL`
@@ -26,7 +26,7 @@ func main() {
 
 ### Statsd
 
-Expose the folling environment variables:
+Expose the following environment variables:
  * `SERVICE`
  * `STATSD_HOST`
  * `STATSD_PORT`
