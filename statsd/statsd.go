@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	Statsd     *dd_statsd.Client
+	Statsd      *dd_statsd.Client
 	statsdHost  = "localhost"
 	serviceName = ""
 	statsdPort  = "8125"
