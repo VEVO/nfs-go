@@ -9,12 +9,14 @@ import (
 )
 
 var (
+	// Statsd is the main structure to send metrics to statsd
 	Statsd      *dd_statsd.Client
 	statsdHost  = "localhost"
 	serviceName = ""
 	statsdPort  = "8125"
 )
 
+// NewStatsd initialize a new statsd client
 func NewStatsd() *dd_statsd.Client {
 	if s := os.Getenv("SERVICE"); s != "" {
 		serviceName = s

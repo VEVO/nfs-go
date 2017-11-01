@@ -7,6 +7,7 @@ import (
 )
 
 var (
+	// Log is the main structure for logging
 	Log         *logrus.Entry
 	serviceName = ""
 	teamName    = ""
@@ -14,6 +15,7 @@ var (
 	logLevel    = logrus.InfoLevel
 )
 
+// NewLogger creates a new logger instance
 func NewLogger() *logrus.Entry {
 	if s := os.Getenv("SERVICE"); s != "" {
 		fmt.Println(fmt.Sprintf("test: %s", s))
