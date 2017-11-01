@@ -9,7 +9,7 @@ services:
       GO_PIPELINE_COUNTER: $GO_PIPELINE_COUNTER
       GO_TO_REVISION: $GO_TO_REVISION
     volumes:
-      - .:/repos
+      - ..:/repos
 
   success:
     extends:
