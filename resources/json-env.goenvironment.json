@@ -1,0 +1,6 @@
+{
+    "pipelines": [
+        "nfs-go"
+    ],
+    "name": "json-env"
+}
