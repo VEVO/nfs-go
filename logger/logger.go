@@ -1,17 +1,17 @@
 package logger
 
 import (
+	"fmt"
 	"github.com/Sirupsen/logrus"
 	"os"
-	"fmt"
 )
 
 var (
-	Log *logrus.Entry
+	Log         *logrus.Entry
 	serviceName = ""
-	teamName = ""
-	version = ""
-	logLevel = logrus.InfoLevel
+	teamName    = ""
+	version     = ""
+	logLevel    = logrus.InfoLevel
 )
 
 func NewLogger() *logrus.Entry {
@@ -37,7 +37,7 @@ func NewLogger() *logrus.Entry {
 	logrus.SetLevel(logLevel)
 	context := logrus.WithFields(logrus.Fields{
 		"service": serviceName,
-		"team": teamName,
+		"team":    teamName,
 		"version": version,
 	})
 
