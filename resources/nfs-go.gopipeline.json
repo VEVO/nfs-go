@@ -4,12 +4,12 @@
         {
           "secure": false,
           "name": "SLACK_CHANNELS_SUCCESS",
-          "value": "##microservices-ops"
+          "value": "##infrastructure-alerts"
         },
         {
           "secure": false,
           "name": "SLACK_CHANNELS_FAILURE",
-          "value": "##microservices-ops"
+          "value": "##infrastructure-alerts"
         }
     ],
     "group" : "infrastructure",
