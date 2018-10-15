@@ -9,9 +9,9 @@ import (
 var (
 	// Log is the main structure for logging
 	Log         *logrus.Entry
-	serviceName = ""
-	teamName    = ""
-	version     = ""
+	serviceName string
+	teamName    string
+	version     string
 	logLevel    = logrus.InfoLevel
 )
 
