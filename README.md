@@ -1,5 +1,8 @@
 # nfs-go
 
+[![GoDoc](https://godoc.org/github.com/VEVO/nfs-go/logger?status.svg)](https://godoc.org/github.com/VEVO/nfs-go/logger)
+[![Test Status](https://github.com/VEVO/nfs-go/workflows/tests/badge.svg)](https://github.com/VEVO/nfs-go/actions?query=workflow%3Atests)
+
 ## Description
 
 The nfs-go package provides helpers that abide by the N-Factor Service specification.
